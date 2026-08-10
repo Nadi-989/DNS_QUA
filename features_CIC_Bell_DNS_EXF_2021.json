@@ -1,0 +1,33 @@
+{
+  "retained": [
+    "rr",
+    "A_frequency",
+    "NS_frequency",
+    "CNAME_frequency",
+    "SOA_frequency",
+    "NULL_frequency",
+    "PTR_frequency",
+    "HINFO_frequency",
+    "MX_frequency",
+    "TXT_frequency",
+    "AAAA_frequency",
+    "SRV_frequency",
+    "OPT_frequency",
+    "rr_count",
+    "rr_name_entropy",
+    "rr_name_length",
+    "distinct_ns",
+    "a_records",
+    "ttl_mean",
+    "ttl_variance"
+  ],
+  "excluded": [
+    "rr_type",
+    "distinct_ip",
+    "unique_country",
+    "unique_asn",
+    "distinct_domains",
+    "reverse_dns",
+    "unique_ttl"
+  ]
+}
