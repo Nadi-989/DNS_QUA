@@ -1,7 +1,7 @@
 # A Deep Autoencoder and Quantum-Inspired Feature Encoding Framework for DNS Anomaly Detection
 
 Official code, data-preparation scripts and reproducibility artifacts for the paper:
-
+![Framework architecture](framework.png)
 > **A Deep Autoencoder and Quantum-Inspired Feature Encoding Framework for DNS Anomaly Detection**
 > N. M. Hussien, M. T. Gaata, H. B. Taher. *International Journal of Intelligent Engineering and Systems*, [year].
 
