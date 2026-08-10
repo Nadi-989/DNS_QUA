@@ -1,0 +1,186 @@
+{
+  "file": "merged_heavy.csv",
+  "seed": 42,
+  "latent": 16,
+  "n_trees": 300,
+  "latent_source": "autoencoder",
+  "part_A_representations": {
+    "raw standardized features (no AE)": {
+      "dims": 20,
+      "accuracy": 0.8525,
+      "auc_roc": 0.8536,
+      "pr_auc": 0.7862,
+      "attack_recall": 0.9992,
+      "attack_precision": 0.7762,
+      "attack_f1": 0.8737,
+      "fpr": 0.3007
+    },
+    "latent, no mapping": {
+      "dims": 16,
+      "accuracy": 0.8525,
+      "auc_roc": 0.8536,
+      "pr_auc": 0.7861,
+      "attack_recall": 0.9992,
+      "attack_precision": 0.7762,
+      "attack_f1": 0.8737,
+      "fpr": 0.3006
+    },
+    "latent, min-max normalization only": {
+      "dims": 16,
+      "accuracy": 0.8525,
+      "auc_roc": 0.8536,
+      "pr_auc": 0.7861,
+      "attack_recall": 0.9992,
+      "attack_precision": 0.7762,
+      "attack_f1": 0.8737,
+      "fpr": 0.3006
+    },
+    "latent, tanh": {
+      "dims": 16,
+      "accuracy": 0.8525,
+      "auc_roc": 0.8536,
+      "pr_auc": 0.7862,
+      "attack_recall": 0.9992,
+      "attack_precision": 0.7762,
+      "attack_f1": 0.8737,
+      "fpr": 0.3007
+    },
+    "latent, cosine only": {
+      "dims": 16,
+      "accuracy": 0.8525,
+      "auc_roc": 0.8536,
+      "pr_auc": 0.7861,
+      "attack_recall": 0.9992,
+      "attack_precision": 0.7762,
+      "attack_f1": 0.8737,
+      "fpr": 0.3007
+    },
+    "latent, sine only": {
+      "dims": 16,
+      "accuracy": 0.8525,
+      "auc_roc": 0.8536,
+      "pr_auc": 0.7861,
+      "attack_recall": 0.9992,
+      "attack_precision": 0.7762,
+      "attack_f1": 0.8737,
+      "fpr": 0.3006
+    },
+    "latent, cosine-sine (proposed QIE)": {
+      "dims": 32,
+      "accuracy": 0.8525,
+      "auc_roc": 0.8537,
+      "pr_auc": 0.7862,
+      "attack_recall": 0.9992,
+      "attack_precision": 0.7763,
+      "attack_f1": 0.8737,
+      "fpr": 0.3006
+    },
+    "latent, polynomial degree 2": {
+      "dims": 152,
+      "accuracy": 0.8525,
+      "auc_roc": 0.8536,
+      "pr_auc": 0.7862,
+      "attack_recall": 0.9992,
+      "attack_precision": 0.7762,
+      "attack_f1": 0.8737,
+      "fpr": 0.3006
+    },
+    "latent, random Fourier features": {
+      "dims": 32,
+      "accuracy": 0.8525,
+      "auc_roc": 0.8536,
+      "pr_auc": 0.7861,
+      "attack_recall": 0.9992,
+      "attack_precision": 0.7762,
+      "attack_f1": 0.8737,
+      "fpr": 0.3007
+    }
+  },
+  "part_B_boundary": {
+    "test_values_total": 451344,
+    "values_below_minus1_before_clipping": 0,
+    "values_above_plus1_before_clipping": 0,
+    "out_of_range_rate_pct": 0.0,
+    "test_rows_with_at_least_one_out_of_range_value": 0,
+    "test_rows_with_out_of_range_pct": 0.0,
+    "values_that_would_alias_without_clipping": 0,
+    "max_absolute_normalized_value_before_clipping": 1.0,
+    "values_clipped_to_minus1": 0,
+    "values_clipped_to_plus1": 597,
+    "endpoint_collision_pairs": 0,
+    "inversion_error_mean_all": 1.098e-17,
+    "inversion_error_max_all": 1.11e-16,
+    "inversion_error_max_interior_only": 1.11e-16,
+    "note_max_error": "a maximum error of 2.0 can occur only at an endpoint, where -1 and +1 map to the same point and the inversion returns the other endpoint"
+  },
+  "part_C_threshold_sweep": [
+    {
+      "threshold": 0.1,
+      "precision": 0.7752,
+      "recall": 0.9995,
+      "fpr": 0.3025,
+      "alerts_per_1000_flows": 658.4
+    },
+    {
+      "threshold": 0.2,
+      "precision": 0.7758,
+      "recall": 0.9995,
+      "fpr": 0.3015,
+      "alerts_per_1000_flows": 657.9
+    },
+    {
+      "threshold": 0.3,
+      "precision": 0.7761,
+      "recall": 0.9994,
+      "fpr": 0.3009,
+      "alerts_per_1000_flows": 657.6
+    },
+    {
+      "threshold": 0.4,
+      "precision": 0.7762,
+      "recall": 0.9993,
+      "fpr": 0.3007,
+      "alerts_per_1000_flows": 657.5
+    },
+    {
+      "threshold": 0.5,
+      "precision": 0.7763,
+      "recall": 0.9992,
+      "fpr": 0.3006,
+      "alerts_per_1000_flows": 657.4
+    },
+    {
+      "threshold": 0.6,
+      "precision": 0.7765,
+      "recall": 0.9967,
+      "fpr": 0.2994,
+      "alerts_per_1000_flows": 655.5
+    },
+    {
+      "threshold": 0.7,
+      "precision": 0.7777,
+      "recall": 0.984,
+      "fpr": 0.2935,
+      "alerts_per_1000_flows": 646.1
+    },
+    {
+      "threshold": 0.8,
+      "precision": 0.8125,
+      "recall": 0.0686,
+      "fpr": 0.0165,
+      "alerts_per_1000_flows": 43.1
+    },
+    {
+      "threshold": 0.9,
+      "precision": 0.8689,
+      "recall": 0.0037,
+      "fpr": 0.0006,
+      "alerts_per_1000_flows": 2.2
+    }
+  ],
+  "part_C_calibration": {
+    "brier_score": 0.1145,
+    "pr_auc": 0.7862,
+    "positive_rate_in_test": 0.5107
+  }
+}

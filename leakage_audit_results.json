@@ -1,0 +1,63 @@
+{
+  "file": "merged_heavy.csv",
+  "seed": 42,
+  "rounding": 6,
+  "exact": {
+    "n_rows": 141044,
+    "n_groups": 48336,
+    "duplicate_rate": 0.6573,
+    "conflicting_groups": 147,
+    "rows_in_conflicting_groups": 92114,
+    "rows_in_conflicting_groups_pct": 65.31,
+    "deterministic_upper_bound": 0.8563
+  },
+  "rounded": {
+    "n_rows": 141044,
+    "n_groups": 44536,
+    "duplicate_rate": 0.6842,
+    "conflicting_groups": 148,
+    "rows_in_conflicting_groups": 92117,
+    "rows_in_conflicting_groups_pct": 65.31,
+    "deterministic_upper_bound": 0.8563
+  },
+  "random_split_overlap": {
+    "n_train": 112835,
+    "n_test": 28209,
+    "shared_groups": 1510,
+    "test_rows_whose_vector_also_in_train": 19961,
+    "test_rows_leaked_pct": 70.76
+  },
+  "group_split_overlap": {
+    "n_train": 110222,
+    "n_test": 30822,
+    "shared_groups": 0,
+    "test_rows_whose_vector_also_in_train": 0,
+    "test_rows_leaked_pct": 0.0,
+    "test_attack_rate": 0.5335,
+    "train_attack_rate": 0.5043
+  },
+  "metrics_random_split": {
+    "accuracy": 0.8525,
+    "auc_roc": 0.8536,
+    "attack_recall": 0.9992,
+    "attack_precision": 0.7762,
+    "attack_f1": 0.8737,
+    "false_positive_rate": 0.3007
+  },
+  "metrics_group_split": {
+    "accuracy": 0.8331,
+    "auc_roc": 0.8378,
+    "attack_recall": 0.9589,
+    "attack_precision": 0.7792,
+    "attack_f1": 0.8597,
+    "false_positive_rate": 0.3108
+  },
+  "metrics_delta": {
+    "accuracy": -0.0194,
+    "auc_roc": -0.0158,
+    "attack_recall": -0.0403,
+    "attack_precision": 0.003,
+    "attack_f1": -0.014,
+    "false_positive_rate": 0.0101
+  }
+}
